@@ -30,11 +30,26 @@ const initialPlayers = [
 function App() {
   const [players, setPlayers] = useState(initialPlayers)
 
+  const handleScoreChange = (index, delta) => {
+    const updatedPlayers = [...players]
+    const updatedPlayer = { ...updatedPlayers[index] }
+    updatedPlayer.score += delta
+    updatedPlayers[index] = updatedPlayer
+    setPlayers(updatedPlayers)
+  }
+
   return (
     <div className="scoreboard">
       <Header />
-      {players.map((p) => (
-        <Player key={p.id} id={p.id} name={p.name} score={p.score} />
+      {players.map((p, index) => (
+        <Player
+          key={p.id}
+          id={p.id}
+          index={index}
+          name={p.name}
+          score={p.score}
+          changeScore={handleScoreChange}
+        />
       ))}
       <PlayerForm />
     </div>
