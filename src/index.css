@@ -18,6 +18,7 @@ html {
   width: 100%;
   height: 100%;
   position: relative;
+  box-sizing: border-box;
 }
 
 body {
@@ -63,8 +64,9 @@ header h1 {
 /* Stats */
 
 .stats,
-.stopwatch {
-  flex-basis: 170px;
+.stopwatch,
+.counter {
+  flex-basis: 180px;
 }
 
 .stats {
@@ -181,7 +183,6 @@ input[type='submit'] {
 /* Counter */
 .counter {
   display: flex;
-  width: 190px;
 }
 
 .counter-action {
@@ -212,4 +213,41 @@ input[type='submit'] {
   font-family: monospace;
   font-size: 2em;
   line-height: 2em;
+}
+
+/* Player */
+.player {
+  display: flex;
+  font-size: 1.2em;
+  border-bottom: solid 2px #eeeeee;
+  letter-spacing: 2px;
+}
+
+.player:last-of-type {
+  border-bottom-color: #d4caff;
+}
+.player-name:hover .remove-player {
+  visibility: visible;
+}
+.player-name,
+.counter-score {
+  color: #2f2366;
+}
+
+.player-name {
+  flex-grow: 1;
+  line-height: 3.5em;
+  padding-left: 10px;
+}
+
+.remove-player {
+  font-size: 1.15em;
+  border: none;
+  outline: none;
+  visibility: hidden;
+  color: #ef5350;
+  cursor: pointer;
+  margin: 0 10px 0 0;
+  padding: 0;
+  background: none;
 }
