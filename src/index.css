@@ -9,7 +9,9 @@
   -webkit-font-smoothing: antialiased;
 }
 
-::-webkit-scrollbar {  display: none; }
+::-webkit-scrollbar {
+  display: none;
+}
 
 #root,
 html {
@@ -19,9 +21,106 @@ html {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; 
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   text-rendering: optimizeLegibility;
-  background: #e8e7e7; 
+  background: #e8e7e7;
   width: 100%;
   height: 100%;
+}
+
+/* ELEMENT STYLES -------------------- */
+
+/* Header */
+header {
+  color: #fff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  background-color: #8063fa;
+  border-bottom: solid 2px #d4caff;
+}
+
+header h1 {
+  flex-grow: 1;
+  font-size: 1.5em;
+  letter-spacing: 2px;
+  font-weight: normal;
+}
+
+.scoreboard {
+  background: #fff;
+  width: 700px;
+  box-shadow: 0 2px 0 rgb(133, 104, 250);
+  border-radius: 6px;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Stats */
+
+.stats,
+.stopwatch {
+  flex-basis: 170px;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  font-weight: normal;
+}
+
+.stats td:first-child {
+  text-align: right;
+  font-weight: normal;
+  letter-spacing: 2px;
+  font-size: 0.7em;
+}
+
+.stats td:last-child {
+  text-align: left;
+}
+
+/* Stopwatch */
+
+.stopwatch {
+  padding: 16px;
+  background: #5b45b9;
+}
+
+.stopwatch-time {
+  display: block;
+  font-family: monospace;
+  font-size: 2.15em;
+}
+
+.stopwatch button {
+  margin: 8px 5px;
+  background-color: #44338d;
+  border-radius: 5px;
+  padding: 7px 8px;
+  border: none;
+  color: #fff;
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-shadow: none;
+  text-transform: uppercase;
+}
+
+.stopwatch button:hover {
+  background: #fff;
+  color: #44338d;
+  cursor: pointer;
+}
+
+.stopwatch-heading {
+  font-size: 0.6em;
+  margin: 0;
+  font-weight: normal;
+  letter-spacing: 2px;
 }
