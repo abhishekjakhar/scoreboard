@@ -1,0 +1,27 @@
+/*          RESET          */
+
+*,
+*::after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar {  display: none; }
+
+#root,
+html {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; 
+  text-rendering: optimizeLegibility;
+  background: #e8e7e7; 
+  width: 100%;
+  height: 100%;
+}
