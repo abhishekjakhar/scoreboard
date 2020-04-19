@@ -51,6 +51,10 @@ function App() {
     setPlayers([...players.filter((p) => p.id !== id)])
   }
 
+  const handleAddPlayer = (name) => {
+    setPlayers([...players, { name, score: 0, id: players.length + 1 }])
+  }
+
   const highScore = getHighScore()
 
   return (
@@ -68,7 +72,7 @@ function App() {
           isHighScore={highScore === p.score}
         />
       ))}
-      <PlayerForm />
+      <PlayerForm addPlayer={handleAddPlayer} />
     </div>
   )
 }
