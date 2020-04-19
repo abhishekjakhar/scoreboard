@@ -40,7 +40,7 @@ function App() {
 
   return (
     <div className="scoreboard">
-      <Header />
+      <Header players={players} title="Scoreboard" />
       {players.map((p, index) => (
         <Player
           key={p.id}
