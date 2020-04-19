@@ -126,7 +126,6 @@ header h1 {
 }
 
 /* Player Form */
-/* FORMS */
 form {
   display: flex;
   justify-content: space-between;
@@ -177,4 +176,40 @@ button,
 input[type='submit'] {
   outline: none;
   transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Counter */
+.counter {
+  display: flex;
+  width: 190px;
+}
+
+.counter-action {
+  border: none;
+  font-size: 1.15em;
+  font-weight: bold;
+  color: #b0aeba;
+  background-color: #dcdcdc;
+  display: block;
+  padding: 20px 20px;
+  cursor: pointer;
+  outline: none;
+}
+
+.counter-action:hover {
+  color: #fff;
+}
+.counter-increment:hover {
+  background: #83d97c;
+}
+.counter-decrement:hover {
+  background: #ef5350;
+}
+
+.counter-score {
+  flex-grow: 1;
+  text-align: center;
+  font-family: monospace;
+  font-size: 2em;
+  line-height: 2em;
 }
