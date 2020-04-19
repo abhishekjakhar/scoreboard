@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 const Stats = ({ players }) => {
   const totalPlayers = players.length
   const totalScore = players.reduce((total, player) => {
     return total + player.score
   }, 0)
+
+  useEffect(() => {
+    document.title = `Total Score: ${totalScore}`
+  }, [totalScore])
+
   return (
     <table className="stats">
       <tbody>
