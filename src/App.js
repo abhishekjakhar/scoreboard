@@ -38,6 +38,10 @@ function App() {
     setPlayers(updatedPlayers)
   }
 
+  const handleRemovePlayer = (id) => {
+    setPlayers([...players.filter((p) => p.id !== id)])
+  }
+
   return (
     <div className="scoreboard">
       <Header players={players} title="Scoreboard" />
@@ -48,6 +52,7 @@ function App() {
           index={index}
           name={p.name}
           score={p.score}
+          removePlayer={handleRemovePlayer}
           changeScore={handleScoreChange}
         />
       ))}

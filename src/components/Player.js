@@ -5,7 +5,12 @@ import Icon from './Icon'
 const Player = (props) => (
   <div className="player">
     <span className="player-name">
-      <button className="remove-player">✖</button>
+      <button
+        className="remove-player"
+        onClick={() => props.removePlayer(props.id)}
+      >
+        ✖
+      </button>
       <Icon />
       {props.name}
     </span>
