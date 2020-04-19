@@ -30,6 +30,15 @@ const initialPlayers = [
 function App() {
   const [players, setPlayers] = useState(initialPlayers)
 
+  const getHighScore = () => {
+    const scores = players.map((p) => p.score)
+    const highScore = Math.max(...scores)
+    if (highScore) {
+      return highScore
+    }
+    return null
+  }
+
   const handleScoreChange = (index, delta) => {
     const updatedPlayers = [...players]
     const updatedPlayer = { ...updatedPlayers[index] }
@@ -41,6 +50,8 @@ function App() {
   const handleRemovePlayer = (id) => {
     setPlayers([...players.filter((p) => p.id !== id)])
   }
+
+  const highScore = getHighScore()
 
   return (
     <div className="scoreboard">
@@ -54,6 +65,7 @@ function App() {
           score={p.score}
           removePlayer={handleRemovePlayer}
           changeScore={handleScoreChange}
+          isHighScore={highScore === p.score}
         />
       ))}
       <PlayerForm />

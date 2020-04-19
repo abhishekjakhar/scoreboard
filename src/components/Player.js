@@ -11,7 +11,7 @@ const Player = (props) => (
       >
         ✖
       </button>
-      <Icon />
+      <Icon isHighScore={props.isHighScore} />
       {props.name}
     </span>
     <Counter
