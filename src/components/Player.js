@@ -2,23 +2,24 @@ import React from 'react'
 import Counter from './Counter'
 import Icon from './Icon'
 
-const Player = (props) => (
+const Player = ({
+  id,
+  index,
+  name,
+  score,
+  removePlayer,
+  changeScore,
+  isHighScore,
+}) => (
   <div className="player">
     <span className="player-name">
-      <button
-        className="remove-player"
-        onClick={() => props.removePlayer(props.id)}
-      >
+      <button className="remove-player" onClick={() => removePlayer(id)}>
         ✖
       </button>
-      <Icon isHighScore={props.isHighScore} />
-      {props.name}
+      <Icon isHighScore={isHighScore} />
+      {name}
     </span>
-    <Counter
-      index={props.index}
-      changeScore={props.changeScore}
-      score={props.score}
-    />
+    <Counter index={index} score={score} changeScore={changeScore} />
   </div>
 )
 
