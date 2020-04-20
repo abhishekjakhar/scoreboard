@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import PropTypes from 'prop-types'
 
 const PlayerForm = ({ addPlayer }) => {
   const [player, setPlayer] = useState('')
@@ -20,6 +21,10 @@ const PlayerForm = ({ addPlayer }) => {
       <input type="submit" value="Add Player" />
     </form>
   )
+}
+
+PlayerForm.propTypes = {
+  addPlayer: PropTypes.func.isRequired,
 }
 
 export default PlayerForm

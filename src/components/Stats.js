@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import PropTypes from 'prop-types'
 
 const Stats = ({ players }) => {
   const totalPlayers = players.length
@@ -24,6 +25,14 @@ const Stats = ({ players }) => {
       </tbody>
     </table>
   )
+}
+
+Stats.propTypes = {
+  players: PropTypes.arrayOf(
+    PropTypes.shape({
+      score: PropTypes.number,
+    }),
+  ).isRequired,
 }
 
 export default Stats
