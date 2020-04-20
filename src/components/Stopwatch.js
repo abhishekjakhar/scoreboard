@@ -29,7 +29,6 @@ const Stopwatch = () => {
     setElapsedTime(0)
   }
 
-  console.log(elapsedTime)
   const seconds = Math.floor(elapsedTime / 1000)
 
   return (
