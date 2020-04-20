@@ -24,7 +24,7 @@ const initialPlayers = [
 function App() {
   const [players, setPlayers] = useState(initialPlayers)
 
-  const getHighScore = () => {
+  const getHighScore = (players) => {
     const scores = players.map((p) => p.score)
     const highScore = Math.max(...scores)
     if (highScore) {
@@ -49,7 +49,7 @@ function App() {
     setPlayers([...players, { name, score: 0, id: players.length + 1 }])
   }
 
-  const highScore = getHighScore()
+  const highScore = getHighScore(players)
 
   return (
     <main className="scoreboard">
