@@ -57,7 +57,7 @@ function App() {
   const highScore = getHighScore()
 
   return (
-    <div className="scoreboard">
+    <main className="scoreboard">
       <Header players={players} />
       {players.map((p, index) => (
         <Player
@@ -72,7 +72,7 @@ function App() {
         />
       ))}
       <PlayerForm addPlayer={handleAddPlayer} />
-    </div>
+    </main>
   )
 }
 

@@ -15,7 +15,7 @@ const Player = ({
   <div className="player">
     <span className="player-name">
       <button className="remove-player" onClick={() => removePlayer(id)}>
-        ✖
+        &#10006;
       </button>
       <Icon isHighScore={isHighScore} />
       {name}

@@ -1,4 +1,4 @@
-/*          RESET          */
+/* RESET STYLES -------------------- */
 
 *,
 *::after,
@@ -8,6 +8,8 @@
   box-sizing: inherit;
   -webkit-font-smoothing: antialiased;
 }
+
+/* BASE STYLES -------------------- */
 
 ::-webkit-scrollbar {
   display: none;
@@ -62,7 +64,6 @@ header h1 {
 }
 
 /* Stats */
-
 .stats,
 .stopwatch,
 .counter {
@@ -89,7 +90,6 @@ header h1 {
 }
 
 /* Stopwatch */
-
 .stopwatch {
   padding: 16px;
   background: #5b45b9;
