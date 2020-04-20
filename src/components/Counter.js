@@ -8,16 +8,14 @@ const Counter = ({ index, score, changeScore }) => {
         className="counter-action counter-decrement"
         onClick={() => changeScore(index, -1)}
       >
-        {' '}
-        -{' '}
+        &minus;
       </button>
       <span className="counter-score">{score}</span>
       <button
         className="counter-action counter-increment"
         onClick={() => changeScore(index, 1)}
       >
-        {' '}
-        +{' '}
+        &#43;
       </button>
     </div>
   )

@@ -81,7 +81,7 @@ header h1 {
   text-align: right;
   font-weight: normal;
   letter-spacing: 2px;
-  font-size: 0.7em;
+  font-size: 0.8em;
 }
 
 .stats td:last-child {
@@ -98,7 +98,7 @@ header h1 {
 .stopwatch-time {
   display: block;
   font-family: monospace;
-  font-size: 2.15em;
+  font-size: 2.2em;
 }
 
 .stopwatch button {
@@ -121,7 +121,7 @@ header h1 {
 }
 
 .stopwatch-heading {
-  font-size: 0.6em;
+  font-size: 0.8em;
   margin: 0;
   font-weight: normal;
   letter-spacing: 2px;
