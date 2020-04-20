@@ -1,3 +1,3 @@
 # Scoreboard React
 
-## Made for Learning Purpose
+I made this little application using React.
