@@ -8,7 +8,6 @@ test('Counter component shows the score, increment and decrement button', () => 
 
   //Act
   render(<Counter score={4} index={1} changeScore={handleScoreChange} />)
-
   //Assert
   expect(screen.getByText('4')).toBeTruthy()
 
