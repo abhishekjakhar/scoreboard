@@ -16,11 +16,6 @@ const initialPlayers = [
   },
   {
     id: 3,
-    name: 'Vinay',
-    score: 0,
-  },
-  {
-    id: 4,
     name: 'Mohit',
     score: 0,
   },
