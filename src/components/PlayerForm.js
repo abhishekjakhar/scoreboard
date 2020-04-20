@@ -6,6 +6,7 @@ const PlayerForm = ({ addPlayer }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    if (player === '') return
     addPlayer(player)
   }
 
